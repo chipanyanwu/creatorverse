@@ -5,7 +5,7 @@ import './App.css'
 function App() {
   return (
     <>
-      <h1>Creatorverse</h1>
+      <h1>creatorverse</h1>
       <Outlet/>
     </>
   )

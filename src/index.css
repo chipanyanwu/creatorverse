@@ -5,22 +5,26 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #121212;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --accent-color: #303469;
+  --accent2-color: #563b7c;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--accent-color);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  /* color: var(--accent-color); */
+  filter: brightness(120%);
 }
 
 body {
@@ -48,22 +52,17 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--accent-color);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.accent {
+  filter: invert(21%) sepia(11%) saturate(3173%) hue-rotate(198deg) brightness(92%) contrast(94%);
+}
+
+.accent2 {
+  filter: invert(24%) sepia(8%) saturate(6185%) hue-rotate(228deg) brightness(92%) contrast(84%);
 }
