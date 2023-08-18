@@ -4,3 +4,45 @@
   padding: 2rem;
   text-align: center;
 }
+
+.main-container {
+  min-height: calc(100vh);
+}
+
+.main-container > div:not(.navbar) {
+  margin-top: 2em;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.25em;
+  
+  /* position: sticky;
+  top: 2em; */
+  height: 3em;
+  z-index: 999;
+
+  /* background: inherit; */
+  background-image: url("./assets/noise.png");
+  backdrop-filter: blur(10px);
+  -webkit-box-shadow: inset 0px 0px 100px -60px rgba(131,107,224,1);
+  -moz-box-shadow: inset 0px 0px 100px -60px rgba(131,107,224,1);
+  box-shadow: inset 0px 0px 100px -60px rgba(131,107,224,1);
+
+  border-radius: var(--border-rad);
+  border-style: solid;
+  border-color: rgba(131, 107, 224, .25);
+}
+
+.subnav button {
+  margin-left: .5em;
+  padding: .9em;
+}
+
+.logo {
+  color: white;
+}

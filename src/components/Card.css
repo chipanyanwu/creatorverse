@@ -4,18 +4,31 @@
     flex-direction: column;
 
     background-color: #1d1d1d;
-    border-radius: .5em;
+    border-radius: var(--border-rad);
     padding: 0;
 
     height: 100%;
 }
 
+.card a {
+    display: contents;
+}
+
 .card-img {
     height: 100%;
     width: 100%;
-    border-top-left-radius: .5em;
-    border-top-right-radius: .5em;
+    border-top-left-radius: var(--border-rad);
+    border-top-right-radius: var(--border-rad);
     object-fit: cover;
+    padding: 0;
+    margin: 0;
+    display: block;
+    transition: all .2s ease-in-out;
+}
+
+.card-img:hover {
+    /* filter: brightness(75%); */
+    filter: grayscale(90%) invert(16%) sepia(70%) saturate(150%) hue-rotate(207deg) brightness(96%) contrast(95%);
 }
 
 .card-content {
@@ -44,17 +57,13 @@
 }
 
 .card-socials img {
-    max-width: 10%;
+    max-width: 8%;
     margin-left: 3%;
     transition: all 0.15s ease-in-out;
 }
 
 .card-socials img:hover {
     transform: scale(1.15)
-}
-
-.card-socials a {
-    display: contents;
 }
 
 .card-socials > p {
@@ -74,35 +83,46 @@
     overflow: hidden;
 }
 
-.card-edit-btn {
+.card-edit-btn, .card-info-btn {
     position: absolute;
-    right: -15px;
-    top: -15px;
+    right: 5px;
+    top: 5px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background-color: #1d1d1d;
+    /* background-color: #1d1d1d; */
     border-radius: 50%;
 
     width: 1%;
     aspect-ratio: 1 / 1;
+    z-index: 2;
 }
 
-.card-edit-btn > img {
+.card-info-btn {
+    left: 5px
+}
+
+.card-edit-btn img {
     display: block;
     height: 100%;
+}
+
+.card-info-btn img {
+    display: block;
+    height: 100%;
+    transform: scale(150%);
 }
 
 .creator-name {
     position: relative;
     white-space: nowrap;
-    /* font-size: 1.75em; */
     font-size: 7.5cqw;
 }
 
 .squiggle {
+    display: inline-block;
     --deco-height: 0.3125em;
     content: "";
     position: absolute;
@@ -114,5 +134,15 @@
     background-size: auto 100%;
     background-repeat: round;
     background-position: 0em;
-    margin-bottom: 1vh;
+    margin: 0.5vh 0;
+}
+
+button {
+    background-image: url("./assets/noise.png");
+    backdrop-filter: blur(30px);
+    background: transparent;
+    -webkit-box-shadow: inset 0px 0px 8px 0px rgba(131,107,224,1);
+    -moz-box-shadow: inset 0px 0px 8px 0px rgba(131,107,224,1);
+    box-shadow: inset 0px 0px 8px 0px rgba(131,107,224,1);
+    stroke: none;
 }

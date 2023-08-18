@@ -1,13 +1,29 @@
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
 import './App.css'
 
 function App() {
   return (
-    <>
-      <h1>creatorverse</h1>
+    <div className="main-container">
+      <div className="navbar">
+        <Link to="/">
+          <h1 className="logo">creatorverse</h1>
+        </Link>
+        <div className="subnav">
+          <Link to="/">
+            <button>
+              Home
+            </button>
+          </Link>
+          <Link to="/creators/add">
+            <button>
+              Add a Creator
+            </button>
+          </Link>
+        </div>
+      </div>
       <Outlet/>
-    </>
+    </div>
   )
 }
 

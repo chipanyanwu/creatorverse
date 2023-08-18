@@ -1,0 +1,161 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1d1d1d;
+    overflow: hidden;
+    border-radius: var(--border-rad);
+
+    background-image: url("./assets/noise.png");
+    backdrop-filter: blur(30px);
+    background: transparent;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(131,107,224,1);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(131,107,224,1);
+    box-shadow: 0px 0px 8px 0px rgba(131,107,224,1);
+    stroke: none;
+}
+
+.container a {
+    display: contents;
+}
+
+h1, h2, p {
+    width: fit-content;
+    text-align: left;
+}
+
+p {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    container-type: inline-size;
+}
+
+.content {
+    --content-padding: 2vw;
+    width: calc(100% - (var(--content-padding) * 2));
+    padding: var( --content-padding) 0;
+}
+
+.header .hero-img {
+    width: 100%;
+    aspect-ratio: 3.5 / 1;
+    object-fit: cover;
+    object-position: 0 25%;
+    filter: grayscale(90%) invert(16%) sepia(70%) saturate(150%) hue-rotate(207deg) brightness(96%) contrast(95%);
+}
+
+.content-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.creator-name {
+    position: relative;
+    white-space: nowrap;
+    font-size: min(5cqw, 100px);
+    margin-top: 0;
+    margin-bottom: .2em;
+}
+
+.subtitle {
+    margin-bottom: .15em;
+    margin-top: .5em;
+    font-weight: bold;
+    font-size: min(2.5cqw, 50px);
+}
+
+.description {
+    font-size: min(1.25cqw, 25px);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    /* max-width: 50%; */
+}
+
+.social-links img {
+    max-width: 4%;
+    margin-left: 3%;
+}
+
+.social-links > p {
+    margin: 0 4px;
+}
+
+.social {
+    display: contents;
+    background-color: white;
+}
+
+.handle {
+    margin-left: .75%;
+    color: white;
+    font-size: min(1.5cqw, 20px);
+    transition: all 1s ease-in-out;
+
+    background: linear-gradient(to right, rgba(131, 107, 224, 1), rgba(131, 107, 224, 1)), linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+.handle:hover {
+    background-size: 0 0.1em, 100% 0.1em;
+}
+
+.edit-btn, .delete-btn {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: #1d1d1d; */
+    border-radius: 50%;
+
+    width: 3.5%;
+    aspect-ratio: 1 / 1;
+    z-index: 2;
+}
+
+.delete-btn {
+    top: 55px
+}
+
+.edit-btn img {
+    display: block;
+    height: 100%;
+}
+
+.delete-btn img {
+    display: block;
+    height: 100%;
+    transform: scale(150%);
+}
+
+.squiggle {
+    display: inline-block;
+    --deco-height: 0.3125em;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(var(--deco-height) * -0.625);
+    height: var(--deco-height);
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='%23FFFFFF' stroke-width='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h100v64H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-size: auto 100%;
+    background-repeat: round;
+    background-position: 0em;
+    margin: 0.5vh 0;
+}

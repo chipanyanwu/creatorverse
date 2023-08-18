@@ -18,12 +18,8 @@ export default function ShowCreators() {
   return (
     <div className="card-container">
       {creators?.map((creator) => {
-        return <Card key={creator.id} name={creator.name} img={creator.imageURL} description={creator.description}/>
+        return <Card key={creator.id} id={creator.id} name={creator.name} img={creator.imageURL} description={creator.description}/>
       })}
-      {/* <Card></Card>
-      <Card></Card>
-      <Card></Card> */}
-      {/* <Card></Card> */}
     </div>
   )
 }

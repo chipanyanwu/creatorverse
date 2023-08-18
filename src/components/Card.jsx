@@ -1,42 +1,48 @@
 import { Link } from "react-router-dom"
 
 import EditIcon from "../assets/edit.svg"
-import InstagramIcom from "../assets/instagram.svg"
-import TwitterIcom from "../assets/twitter.svg"
-import YoutubeIcom from "../assets/youtube.svg"
-import TikTokIcon from "../assets/tiktok.svg"
+import InfoIcon from "../assets/info.svg"
+import InstagramIcon from "../assets/instagram.svg"
+import TwitterIcon from "../assets/twitter.svg"
+import YoutubeIcon from "../assets/youtube.svg"
 import TwitchIcon from "../assets/twitch.svg"
 
 import "./Card.css"
 
-export default function Card({ name, img, description, socials }) {
+export default function Card({ id, name, img, description, socials }) {
     return (
         <div className="card">
             <button className="card-edit-btn">
-                <img className="accent" src={EditIcon}/>
+                <Link to={`/edit/${id}`}>
+                    <img className="accent" src={EditIcon}/>
+                </Link>
             </button>
-            <img className="card-img" src={img}/>
+            <button className="card-info-btn">
+                <Link to={`/creators/${id}`}>
+                    <img className="accent" src={InfoIcon}/>
+                </Link>
+            </button>
+            <Link to={`creators/${id}`}>
+                <img className="card-img" src={img}/>
+            </Link>
             <div className="card-content">
                 <div className="card-header">
                     <h2 className="creator-name">
-                        <span className="fancy">{name}</span>
-                        <div className="squiggle accent"></div>
+                        {name}
+                        <div className="squiggle accent">&nbsp;</div>
                     </h2>
                     <div className="card-socials">
                         <Link to="https://www.instagram.com/" target="_blank">
-                            <img className="accent" src={InstagramIcom}/>
-                        </Link>
-                        <Link to="https://www.instagram.com/" target="_blank">
-                            <img className="accent" src={TwitterIcom}/>
-                        </Link>
-                        <Link to="https://www.instagram.com/" target="_blank">
-                            <img className="accent" src={YoutubeIcom}/>
-                        </Link>
-                        <Link to="https://www.instagram.com/" target="_blank">
-                            <img className="accent" src={TikTokIcon}/>
+                            <img className="accent" src={YoutubeIcon}/>
                         </Link>
                         <Link to="https://www.instagram.com/" target="_blank">
                             <img className="accent" src={TwitchIcon}/>
+                        </Link>
+                        <Link to="https://www.instagram.com/" target="_blank">
+                            <img className="accent" src={InstagramIcon}/>
+                        </Link>
+                        <Link to="https://www.instagram.com/" target="_blank">
+                            <img className="accent" src={TwitterIcon}/>
                         </Link>
                     </div>
                 </div>

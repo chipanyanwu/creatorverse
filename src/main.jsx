@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         element: <AddCreator/>
       },
       {
-        path: "creators/edit",
+        path: "edit/:creatorId",
         element: <EditCreator/>
       }
     ]
