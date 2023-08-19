@@ -1,5 +1,7 @@
+import CreatorForm from "../components/CreatorForm"
+
 export default function EditCreator() {
   return (
-    <div>EditCreator</div>
+    <CreatorForm/>
   )
 }

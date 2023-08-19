@@ -32,18 +32,26 @@ export default function Card({ id, name, img, description, socials }) {
                         <div className="squiggle accent">&nbsp;</div>
                     </h2>
                     <div className="card-socials">
-                        <Link to="https://www.instagram.com/" target="_blank">
-                            <img className="accent" src={YoutubeIcon}/>
-                        </Link>
-                        <Link to="https://www.instagram.com/" target="_blank">
-                            <img className="accent" src={TwitchIcon}/>
-                        </Link>
-                        <Link to="https://www.instagram.com/" target="_blank">
-                            <img className="accent" src={InstagramIcon}/>
-                        </Link>
-                        <Link to="https://www.instagram.com/" target="_blank">
-                            <img className="accent" src={TwitterIcon}/>
-                        </Link>
+                        {socials?.youtube &&
+                            <Link to="https://www.instagram.com/" target="_blank">
+                                <img className="accent" src={YoutubeIcon}/>
+                            </Link>
+                        }
+                        {socials?.twitch &&
+                            <Link to="https://www.instagram.com/" target="_blank">
+                                <img className="accent" src={TwitchIcon}/>
+                            </Link>
+                        }
+                        {socials?.instagram &&
+                            <Link to="https://www.instagram.com/" target="_blank">
+                                <img className="accent" src={InstagramIcon}/>
+                            </Link>
+                        }
+                        {socials?.twitter &&
+                            <Link to="https://www.instagram.com/" target="_blank">
+                                <img className="accent" src={TwitterIcon}/>
+                            </Link>
+                        }
                     </div>
                 </div>
                 <div className="card-desc">

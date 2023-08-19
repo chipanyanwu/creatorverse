@@ -1,5 +1,7 @@
+import CreatorForm from "../components/CreatorForm"
+
 export default function AddCreator() {
   return (
-    <div>AddCreator</div>
+    <CreatorForm/>
   )
 }

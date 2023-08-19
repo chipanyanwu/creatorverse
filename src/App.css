@@ -38,6 +38,10 @@
   border-color: rgba(131, 107, 224, .25);
 }
 
+.subnav {
+  margin-left: 8em;
+}
+
 .subnav button {
   margin-left: .5em;
   padding: .9em;

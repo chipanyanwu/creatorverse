@@ -30,7 +30,6 @@ p {
 
 .header {
     width: 100%;
-    container-type: inline-size;
 }
 
 .content {
@@ -39,9 +38,14 @@ p {
     padding: var( --content-padding) 0;
 }
 
+.hero-img {
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
+}
+
 .header .hero-img {
     width: 100%;
-    aspect-ratio: 3.5 / 1;
+    aspect-ratio: 3 / 1;
     object-fit: cover;
     object-position: 0 25%;
     filter: grayscale(90%) invert(16%) sepia(70%) saturate(150%) hue-rotate(207deg) brightness(96%) contrast(95%);
