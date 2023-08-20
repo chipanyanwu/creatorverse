@@ -33,22 +33,22 @@ export default function Card({ id, name, img, description, socials }) {
                     </h2>
                     <div className="card-socials">
                         {socials?.youtube &&
-                            <Link to="https://www.instagram.com/" target="_blank">
+                            <Link to={`https://www.youtube.com/${socials?.youtube}`} target="_blank">
                                 <img className="accent" src={YoutubeIcon}/>
                             </Link>
                         }
                         {socials?.twitch &&
-                            <Link to="https://www.instagram.com/" target="_blank">
+                            <Link to={`https://www.twitch.com/${socials?.twitch}`} target="_blank">
                                 <img className="accent" src={TwitchIcon}/>
                             </Link>
                         }
                         {socials?.instagram &&
-                            <Link to="https://www.instagram.com/" target="_blank">
+                            <Link to={`https://www.instagram.com/${socials?.instagram}`} target="_blank">
                                 <img className="accent" src={InstagramIcon}/>
                             </Link>
                         }
                         {socials?.twitter &&
-                            <Link to="https://www.instagram.com/" target="_blank">
+                            <Link to={`https://www.twitter.com/${socials?.twitter}`} target="_blank">
                                 <img className="accent" src={TwitterIcon}/>
                             </Link>
                         }

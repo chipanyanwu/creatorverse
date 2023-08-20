@@ -2,11 +2,6 @@ import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import { createCreator, loadCreator, updateCreator } from "../client.js"
 
-import InstagramIcon from "../assets/instagram.svg"
-import TwitterIcon from "../assets/twitter.svg"
-import YoutubeIcon from "../assets/youtube.svg"
-import TwitchIcon from "../assets/twitch.svg"
-
 import "./CreatorForm.css"
 
 export default function CreatorForm() {
@@ -60,36 +55,56 @@ export default function CreatorForm() {
     }
 
     return (
-        <>
+        <div className="creator-form-container">
             {(creatorId == undefined || currentData) &&
                 <form id="creator-form" onSubmit={submit}>
-                    <label htmlFor="name">Name</label><br/>
-                    <input onChange={updateNewData} defaultValue={currentData?.name} type="text" id="name" name="name" required/><br/>
+                    <label htmlFor="name"><h2>Name</h2></label>
+                    <input onChange={updateNewData} defaultValue={currentData?.name} type="text" id="name" name="name" required/>
         
-                    <label htmlFor="image">Image</label><br/>
-                    <input onChange={updateNewData} defaultValue={currentData?.imageURL} type="text" id="image" name="imageURL" required/><br/>
+                    <label htmlFor="image">
+                        <h2>Image</h2>
+                        <p>Provide a link to an image of your creator. Be sure to include the http://</p>
+                    </label>
+                    <input onChange={updateNewData} defaultValue={currentData?.imageURL} type="text" id="image" name="imageURL" required/>
         
-                    <label htmlFor="description">Description</label><br/>
-                    <textarea onChange={updateNewData} defaultValue={currentData?.description} type="text" id="description" name="description" required/><br/>
+                    <label htmlFor="description">
+                        <h2>Description</h2>
+                        <p>Provide a description of the creator. Who are they? What makes them interesting?</p>
+                    </label>
+                    <textarea onChange={updateNewData} defaultValue={currentData?.description} rows="4" type="text" id="description" name="description" required/>
         
-                    <h3>Social Media Links</h3>
+                    <div className="section-header">
+                        <h2>Social Media</h2>
+                        <p>Provide at least one of the creator&apos;s social media handles.</p>
+                    </div>
         
-                    <label htmlFor="youtube">Youtube</label><br/>
-                    <input className="social-handle" onChange={updateNewData} defaultValue={currentData?.socials.youtube} type="text" id="youtube" name="youtube"/><br/>
+                    <label htmlFor="youtube">
+                        <h2>Youtube</h2>
+                        <p>The creator&apos;s YouTube handle (without the @)</p>
+                    </label>
+                    <input className="social-handle" onChange={updateNewData} defaultValue={currentData?.socials?.youtube} type="text" id="youtube" name="youtube"/>
         
-                    <label htmlFor="twitch">Twitch</label><br/>
-                    <input className="social-handle" onChange={updateNewData} defaultValue={currentData?.socials.twitch} type="text" id="twitch" name="twitch"/><br/>
+                    <label htmlFor="twitch">
+                        <h2>Twitch</h2>
+                        <p>The creator&apos;s Twitch handle (without the @)</p>
+                    </label>
+                    <input className="social-handle" onChange={updateNewData} defaultValue={currentData?.socials?.twitch} type="text" id="twitch" name="twitch"/>
         
-                    <label htmlFor="instagram">Instagram</label><br/>
-                    <input className="social-handle" onChange={updateNewData} defaultValue={currentData?.socials.instagram} type="text" id="instagram" name="instagram"/><br/>
+                    <label htmlFor="instagram">
+                        <h2>Instagram</h2>
+                        <p>The creator&apos;s Instagram handle (without the @)</p>
+                    </label>
+                    <input className="social-handle" onChange={updateNewData} defaultValue={currentData?.socials?.instagram} type="text" id="instagram" name="instagram"/>
         
-                    <label htmlFor="twitter">Twitter</label><br/>
-                    <input className="social-handle" onChange={updateNewData} defaultValue={currentData?.socials.twitter} type="text" id="twitter" name="twitter" /><br/>
+                    <label htmlFor="twitter">
+                        <h2>Twitter</h2>
+                        <p>The creator&apos;s Twitter handle (without the @)</p>
+                    </label>
+                    <input className="social-handle" onChange={updateNewData} defaultValue={currentData?.socials?.twitter} type="text" id="twitter" name="twitter" />
         
-                    <br/>
                     <button type="submit">{submitText}</button>
                 </form>
             }
-        </>
+        </div>
     )
 }

@@ -44,7 +44,7 @@ export default function ViewCreator() {
           </h1>
           <div className="social-links">
             {creator?.socials?.youtube != null &&
-              <Link to="https://www.instagram.com/" target="_blank">
+              <Link to={`https://www.youtube.com/${creator?.socials?.youtube}`} target="_blank">
                 <div className="social">
                   <img className="accent" src={YoutubeIcon}/>
                   <h3 className="handle">@{creator?.socials?.youtube}</h3>
@@ -52,7 +52,7 @@ export default function ViewCreator() {
               </Link>
             }
             {creator?.socials?.twitch != null &&
-              <Link to="https://www.instagram.com/" target="_blank">
+              <Link to={`https://www.twitch.com/${creator?.socials?.twitch}`} target="_blank">
                 <div className="social">
                   <img className="accent" src={TwitchIcon}/>
                   <h3 className="handle">@{creator?.socials?.twitch}</h3>
@@ -60,7 +60,7 @@ export default function ViewCreator() {
               </Link>
             }
             {creator?.socials?.instagram != null &&
-              <Link to="https://www.instagram.com/" target="_blank">
+              <Link to={`https://www.instagram.com/${creator?.socials?.instagram}`} target="_blank">
                 <div className="social">
                   <img className="accent" src={InstagramIcon}/>
                   <h3 className="handle">@{creator?.socials?.instagram}</h3>
@@ -68,7 +68,7 @@ export default function ViewCreator() {
               </Link>
             }
             {creator?.socials?.twitter != null &&
-              <Link to="https://www.instagram.com/" target="_blank">
+              <Link to={`https://www.twitter.com/${creator?.socials?.twitter}`} target="_blank">
                 <div className="social">
                   <img className="accent" src={TwitterIcon}/>
                   <h3 className="handle">@{creator?.socials?.twitter}</h3>

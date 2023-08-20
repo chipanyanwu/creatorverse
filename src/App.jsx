@@ -10,7 +10,7 @@ function App() {
           <h1 className="logo">creatorverse</h1>
         </Link>
         <div className="subnav">
-          <Link to="/">
+          <Link id="subnav-home-btn" to="/">
             <button>
               Home
             </button>
