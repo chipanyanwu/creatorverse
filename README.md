@@ -36,7 +36,8 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented required features:
 
 <!-- 👉🏿<img src='https://i.imgur.com/QVAXuiN.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' /> -->
-👉🏿<a src="https://i.imgur.com/QVAXuiN.mp4" target="_blank">Link to Imgur (too large for GitHub)</a>
+<!-- 👉🏿<a src="https://i.imgur.com/QVAXuiN.mp4" target="_blank">Link to Imgur (too large for GitHub)</a> -->
+[Link to Imgur](https://i.imgur.com/QVAXuiN.mp4) (too large for GitHub)
 
 GIF created with Kap
 
