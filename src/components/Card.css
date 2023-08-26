@@ -43,7 +43,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 5% 0;
+    margin: 4% 0;
     margin-bottom: 3%;
 }
 
@@ -59,8 +59,8 @@
 }
 
 .card-socials img {
-    max-width: 8%;
-    margin-left: 3%;
+    height: 1.5em;
+    margin-left: .5em;
     transition: all 0.15s ease-in-out;
 }
 
@@ -95,6 +95,7 @@
     justify-content: center;
 
     /* background-color: #1d1d1d; */
+    background: rgba(29,29,29,.4);
     border-radius: 50%;
 
     width: 1%;

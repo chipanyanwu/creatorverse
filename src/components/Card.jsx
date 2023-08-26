@@ -14,12 +14,12 @@ export default function Card({ id, name, img, description, socials }) {
         <div className="card">
             <button className="card-edit-btn">
                 <Link to={`/edit/${id}`}>
-                    <img className="accent" src={EditIcon}/>
+                    <img src={EditIcon}/>
                 </Link>
             </button>
             <button className="card-info-btn">
                 <Link to={`/creators/${id}`}>
-                    <img className="accent" src={InfoIcon}/>
+                    <img src={InfoIcon}/>
                 </Link>
             </button>
             <Link to={`creators/${id}`}>
